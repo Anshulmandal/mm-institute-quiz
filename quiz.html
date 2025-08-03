@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - MM Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Quiz Start Screen -->
+        <div id="quiz-start" class="quiz-start">
+            <div class="quiz-card">
+                <div class="quiz-header">
+                    <div class="logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h1>MM Institute</h1>
+                    </div>
+                    <h2>Tally Prime Quiz</h2>
+                    <p>Test your knowledge with our comprehensive quiz</p>
+                </div>
+                <div class="quiz-info">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>20 Multiple Choice Questions</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>20 Minutes Time Limit</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Instant Results</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certificate on Completion</span>
+                        </div>
+                    </div>
+                    <div class="instructions">
+                        <h3>Instructions:</h3>
+                        <ul>
+                            <li>Read each question carefully</li>
+                            <li>Select the best answer from the given options</li>
+                            <li>You can navigate between questions</li>
+                            <li>Submit before time runs out</li>
+                            <li>Minimum 60% score required for certificate</li>
+                        </ul>
+                    </div>
+                    <div class="name-input">
+                        <label for="studentName">Enter your name:</label>
+                        <input type="text" id="studentName" placeholder="Your full name" required>
+                    </div>
+                    <div class="quiz-buttons">
+                        <button class="btn-secondary" onclick="goHome()">Back to Home</button>
+                        <button class="btn-primary" onclick="startQuizTimer()">Start Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Questions -->
+        <div id="quiz-questions" class="quiz-questions" style="display: none;">
+            <div class="quiz-header-bar">
+                <div class="quiz-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>M.M. Institute Quiz</span>
+                </div>
+                <div class="quiz-status">
+                    <div class="timer">
+                        <i class="fas fa-clock"></i>
+                        <span id="timer">10:00</span>
+                    </div>
+                    <div class="question-counter">
+                        Question <span id="current-question">1</span> of <span id="total-questions">10</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <div class="question-card">
+                <div class="question-content">
+                    <h3 id="question-text">Loading question...</h3>
+                    <div class="options" id="options-container">
+                        <!-- Options will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="question-navigation">
+                    <button class="btn-secondary" id="prev-btn" onclick="previousQuestion()" disabled>Previous</button>
+                    <button class="btn-primary" id="next-btn" onclick="nextQuestion()" disabled>Next Question</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

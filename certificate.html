@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate - M.M. Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="certificate-container">
+        <div class="certificate-header">
+            <div class="logo">
+                <div><img src="img/logo.png"  width="15%" height="15%"></div>
+                <h1>M.M. Institute</h1>
+            </div>
+            <div class="certificate-actions">
+                <button class="btn-secondary" onclick="printCertificate()">
+                    <i class="fas fa-print"></i>
+                    Print Certificate
+                </button>
+                <button class="btn-secondary" onclick="goHome()">
+                    <i class="fas fa-home"></i>
+                    Home
+                </button>
+            </div>
+        </div>
+
+        <div class="certificate-wrapper">
+            <div class="certificate" id="certificate">
+                <div class="certificate-border">
+                    <div class="certificate-content">
+                        <div class="certificate-logo">
+                            <div class="logo-circle">
+                                <div><img src="img/logo.png"  width="100%" height="100%"></div>
+                            </div>
+                        </div>
+
+                        <h1 class="certificate-title">CERTIFICATE OF COMPLETION</h1>
+
+                        <div class="institute-name">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>M.M. Institute</span>
+                        </div>
+
+                        <p class="certificate-text">This is to certify that</p>
+
+                        <h2 class="student-name" id="cert-student-name">Student Name</h2>
+
+                        <p class="certificate-text">has successfully completed</p>
+
+                        <h3 class="course-name">Tally Prime</h3>
+
+                        <p class="certificate-text">
+                            with a score of <span class="score-highlight" id="cert-score">0%</span>
+                        </p>
+
+                        <div class="certificate-footer">
+                            <div class="cert-date">
+                                <p class="footer-label">Date of Completion</p>
+                                <p class="footer-value" id="cert-date">January 1, 2024</p>
+                            </div>
+                            <div class="cert-authority">
+                                <p class="footer-label">Authorized by</p>
+                                <p class="footer-value">M.M. Institute</p>
+                            </div>
+                        </div>
+
+                        <div class="certificate-seal">
+                            <div class="seal">
+                              <div><img src="img/lg.png"  width="90%" height="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

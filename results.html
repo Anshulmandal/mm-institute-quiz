@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results - MM Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="results-container">
+        <div class="results-header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>MM Institute</h1>
+            </div>
+            <h2>Quiz Results</h2>
+        </div>
+
+        <div class="results-content">
+            <div class="results-summary">
+                <div class="score-card">
+                    <div class="score-circle">
+                        <span id="percentage-score">0%</span>
+                    </div>
+                    <h3 id="result-message">Loading...</h3>
+                    <p id="result-description">Please wait...</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="correct-answers">0</div>
+                        <div class="stat-label">Correct Answers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="incorrect-answers">0</div>
+                        <div class="stat-label">Incorrect Answers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="total-score">0</div>
+                        <div class="stat-label">Total Questions</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="final-percentage">0%</div>
+                        <div class="stat-label">Final Score</div>
+                    </div>
+                </div>
+
+                <div class="certificate-status" id="certificate-status">
+                    <div class="status-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="status-text">
+                        <h4>Certificate Status</h4>
+                        <p id="certificate-message">Loading...</p>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-primary" id="certificate-btn" onclick="viewCertificate()" style="display: none;">
+                        <i class="fas fa-download"></i>
+                        View Certificate
+                    </button>
+                    <button class="btn-secondary" onclick="retakeQuiz()">
+                        <i class="fas fa-redo"></i>
+                        Retake Quiz
+                    </button>
+                    <button class="btn-secondary" onclick="goHome()">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </button>
+                </div>
+            </div>
+
+            <div class="answers-review">
+                <h3>Review Your Answers</h3>
+                <div id="answers-container">
+                    <!-- Answers will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
